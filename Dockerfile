@@ -21,4 +21,4 @@ RUN yum install gcc gcc-c++ make git openssl-devel bzip2-devel zlib-devel readli
     pip install --upgrade pip && \
     pip install pipenv
 
-CMD [ "python" ]
+CMD [ "/bin/bash" ]
