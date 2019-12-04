@@ -17,8 +17,8 @@ RUN yum install gcc gcc-c++ make git openssl-devel bzip2-devel zlib-devel readli
     /root/.pyenv/bin/pyenv install ${PYTHON_VERSION} && \
     /root/.pyenv/bin/pyenv global ${PYTHON_VERSION} && \
     # パッケージ管理をするためにpipenvをインストール
-    python -m ensurepip && \
-    pip install --upgrade pip && \
-    pip install pipenv
+    /root/.pyenv/shims/python -m ensurepip && \
+    /root/.pyenv/shims/pip install --upgrade pip && \
+    /root/.pyenv/shims/pip install pipenv
 
 CMD [ "/bin/bash" ]
