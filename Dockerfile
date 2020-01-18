@@ -23,6 +23,7 @@ RUN yum install gcc gcc-c++ make git openssl-devel bzip2-devel zlib-devel readli
     /root/.pyenv/shims/python -m ensurepip && \
     /root/.pyenv/shims/pip install --upgrade pip && \
     /root/.pyenv/shims/pip install pipenv && \
+    # awscliインストール
     /root/.pyenv/shims/pip install awscli
 
 CMD [ "/bin/bash" ]
