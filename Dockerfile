@@ -6,7 +6,7 @@ ARG PYTHON_VERSION=3.6.4
 ENV PYTHON_VERSION ${PYTHON_VERSION}
 
 # Pythonのバージョンを切り替えるためにpyenvをインストール
-RUN yum install gcc gcc-c++ make git openssl-devel bzip2-devel zlib-devel readline-devel sqlite-devel tar zip -y && \
+RUN yum install gcc gcc-c++ make git openssl-devel bzip2-devel zlib-devel readline-devel sqlite-devel libffi-devel tar zip -y && \
     git clone git://github.com/yyuu/pyenv.git ~/.pyenv && \
     git clone git://github.com/yyuu/pyenv-update.git ~/.pyenv/plugins/pyenv-update && \
     echo "export LC_ALL='en_US.UTF-8'" >> ~/.bashrc  && \
