@@ -26,6 +26,7 @@ RUN yum install gcc gcc-c++ make git openssl-devel bzip2-devel zlib-devel readli
     # Amazon LunuxのデフォルトのPythonは2系なので、pyenvでバージョンを指定してインストール
     /root/.pyenv/bin/pyenv install ${PYTHON_VERSION} && \
     /root/.pyenv/bin/pyenv global ${PYTHON_VERSION} && \
+    /root/.pyenv/shims/pip install --upgrade pip && \
     # awscliインストール
     /root/.pyenv/shims/pip install awscli
 
